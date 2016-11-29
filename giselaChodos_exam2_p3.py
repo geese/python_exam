@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Computes an alternating sum of all elements in a list. 
+Reads in a series of values input by the user.
+Computes an alternating sum of all values entered. 
 For example, if your programs reads
 input:
     1 4 9 16 9 7 4 9 11
-    then, it computes 1 - 4 + 9 - 16 + 9 ... = (sum)
+    then, it computes 1 - 4 + 9 - 16 + 9 -7 +4 -9 + 11 = -2
 """
 import sys
 
@@ -32,6 +33,7 @@ def main():
     """
     Prompts the user to enter values one at a time,
     blank input to quit.
+    Prints the alternating sum.
     """
     values = []
     value = 1
