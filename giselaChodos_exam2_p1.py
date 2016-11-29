@@ -1,6 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
-
+Program asks applicant to enter annual household income and number of children.
+Based on this information, the program calculates and prints the amount
+of financial assistance for which this family is eligible.
 """
 import sys
 
@@ -32,17 +34,18 @@ def main():
     """
     Prompts the user to enter annual household income and number of children.
     Quits if user enters -1
+    Prints the calculated financial assistance amount.
     """
     
     income = ""
-    while income != -1:
+    while income != "-1":
         print("What is the annual household income? (-1 to quit)")
         income = input()    #read keyboard input
-        if income != -1:
+        if income != "-1":
             print("How many children?")
             kids = input()
-            amount = calc_assistance(income, kids)
-            print ("The assistance amount is ${:.2f}".format(0 if amount is None else amount))
+            amount = calc_assistance(float(income), int(kids))
+            print ("The assistance amount is ${:.2f}.".format(0 if amount is None else amount))
     return
 
 
@@ -58,6 +61,5 @@ if __name__ == '__main__':
 
 
 
-#http://www.noah.org/wiki/Python_starter_script
 
 
